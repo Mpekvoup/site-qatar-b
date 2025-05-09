@@ -8,9 +8,12 @@
   ],
   "routes": [
     {
+      "src": "/",
+      "dest": "/template/index.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/template/$1"
     }
   ]
 }
--
