@@ -1,0 +1,12 @@
+{
+  "name": "g2m-consulting",
+  "version": "1.0.0",
+  "description": "G2M International Consulting website",
+  "scripts": {
+    "dev": "npx serve",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
