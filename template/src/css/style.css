@@ -578,6 +578,166 @@ body::before {
   }
 }
 
+/* --- Registration Places Section --- */
+.registration-places.enhanced {
+  position: relative;
+  background: #f7fafd;
+  padding: 64px 0 64px 0;
+  overflow: hidden;
+}
+.registration-places-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, #e6f0fa 0%, #fff 80%);
+  opacity: 0.55;
+  z-index: 0;
+  pointer-events: none;
+}
+.registration-places-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #a02c4a;
+  margin-bottom: 38px;
+}
+.registration-logos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+}
+.registration-logo-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(44,122,160,0.08), 0 1.5px 8px rgba(44,122,160,0.04);
+  padding: 32px 28px 22px 28px;
+  flex: 1 1 200px;
+  min-width: 180px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1.5px solid #e6f0fa;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
+}
+.registration-logo-card:hover {
+  box-shadow: 0 8px 36px rgba(44,122,160,0.16), 0 2px 12px rgba(44,122,160,0.08);
+  border-color: #2c7aa033;
+  transform: translateY(-4px) scale(1.025);
+}
+.registration-logo-img {
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 2px 8px #a02c4a11);
+  transition: filter 0.2s;
+}
+.registration-logo-card:hover .registration-logo-img {
+  filter: drop-shadow(0 4px 16px #2c7aa055);
+}
+.registration-logo-label {
+  text-align: center;
+  font-size: 1.04rem;
+  color: #2c7aa0;
+  font-weight: 600;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .registration-logos-cards {
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+  }
+  .registration-logo-card {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* --- Clients Section Enhanced --- */
+.clients-section.enhanced {
+  position: relative;
+  background: #fff;
+  padding: 64px 0 64px 0;
+  overflow: hidden;
+}
+.clients-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, #f7e6ee 0%, #fff 80%);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+.clients-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #a02c4a;
+  margin-bottom: 38px;
+}
+.clients-logos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+}
+.client-logo-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(160,44,74,0.08), 0 1.5px 8px rgba(160,44,74,0.04);
+  padding: 32px 28px 22px 28px;
+  flex: 1 1 200px;
+  min-width: 180px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1.5px solid #f3dbe4;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
+}
+.client-logo-card:hover {
+  box-shadow: 0 8px 36px rgba(160,44,74,0.16), 0 2px 12px rgba(160,44,74,0.08);
+  border-color: #a02c4a33;
+  transform: translateY(-4px) scale(1.025);
+}
+.client-logo-img {
+  height: 54px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 2px 8px #a02c4a11);
+  transition: filter 0.2s;
+}
+.client-logo-card:hover .client-logo-img {
+  filter: drop-shadow(0 4px 16px #a02c4a55);
+}
+.client-logo-label {
+  text-align: center;
+  font-size: 1.04rem;
+  color: #a02c4a;
+  font-weight: 600;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .clients-logos-cards {
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+  }
+  .client-logo-card {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
 .strategy-section {
   background: #f4f4f4;
   color: #222;
