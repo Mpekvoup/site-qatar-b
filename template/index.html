@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>G2M Intl Consulting</title>
-    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header fade-in">
       <div class="logo">
         G2M<br /><span>INTL CONSULTING</span>
       </div>
@@ -18,13 +18,13 @@
         <a href="#" class="lang">En</a>
       </nav>
     </header>
-    <main class="main">
+    <main class="main fade-in">
       <div class="main-bg"></div>
       <div class="main-content">
         <h1>Хотите развивать<br />бизнес в Катаре?</h1>
         <p>Сопроводим на всех этапах — от регистрации компании до выхода на рынок и работы с инвесторами.</p>
         <a href="#" class="btn">Получить консультацию</a>
-        <div class="services">
+        <div class="services fade-in">
           <div class="service">
             <h3>Регистрация компаний</h3>
             <p>Сопровождаем при открытии бизнеса в Катаре: оформление документов, получение лицензий, составление местных и международных стандартов, корпоративное управление.</p>
@@ -40,7 +40,7 @@
         </div>
       </div>
     </main>
-    <section class="about-section">
+    <section class="about-section fade-in">
       <div class="about-container">
         <div class="about-text">
           <h2>Кто мы</h2>
@@ -51,33 +51,36 @@
           </p>
         </div>
         <div class="about-image">
-          <img src="/src/images/qatarsite.png" alt="Встреча в Катаре" />
+          <img src="src/images/qatarsite.png" alt="Встреча в Катаре" />
         </div>
       </div>
     </section>
 
-    <section class="principles-section">
-      <div class="principles-container">
-        <h2>Наши принципы</h2>
-        <p class="principles-subtitle">Мы строим работу на трёх ключевых ценностях:</p>
-        <div class="principles-list">
-          <div class="principle">
-            <div class="principle-icon">&#10003;</div>
-            <div>
+    <section class="principles-section fade-in">
+      <div class="principles-bg"></div>
+      <div class="principles-container enhanced">
+        <div class="principles-header">
+          <h2 class="principles-title">Наши принципы</h2>
+          <p class="principles-subtitle">Мы строим работу на трёх ключевых ценностях:</p>
+        </div>
+        <div class="principles-list-cards">
+          <div class="principle-card">
+            <div class="principle-icon-circle principle-icon-1">&#10003;</div>
+            <div class="principle-card-content">
               <div class="principle-title">Честность</div>
               <div class="principle-desc">Работаем открыто, без скрытых условий. Прозрачность — основа долгосрочного партнёрства.</div>
             </div>
           </div>
-          <div class="principle">
-            <div class="principle-icon">&#10003;&#10003;</div>
-            <div>
+          <div class="principle-card">
+            <div class="principle-icon-circle principle-icon-2">&#10003;&#10003;</div>
+            <div class="principle-card-content">
               <div class="principle-title">Индивидуальный подход</div>
               <div class="principle-desc">Каждому бизнесу — своё решение. Мы глубоко вникаем в задачи клиента и настраиваем стратегию под конкретные цели.</div>
             </div>
           </div>
-          <div class="principle">
-            <div class="principle-icon">&#10148;</div>
-            <div>
+          <div class="principle-card">
+            <div class="principle-icon-circle principle-icon-3">&#10148;</div>
+            <div class="principle-card-content">
               <div class="principle-title">Ориентация на результат</div>
               <div class="principle-desc">Главное — практическая польза. Мы измеряем успех в понятных метриках: открытие компании, получение визы, привлечённые инвестиции.</div>
             </div>
@@ -85,44 +88,52 @@
         </div>
       </div>
     </section>
-    <section class="registration-section">
-      <div class="registration-container">
-        <h2>Регистрация компании в Катаре</h2>
-        <p class="registration-subtitle">Пошаговый процесс</p>
-        <div class="registration-steps">
-          <div class="registration-step">
+    <section class="registration-section fade-in">
+      <div class="registration-bg"></div>
+      <div class="registration-container enhanced">
+        <div class="registration-header">
+          <h2 class="registration-title">Регистрация компании в Катаре</h2>
+          <p class="registration-subtitle">Пошаговый процесс сопровождения от экспертов G2M</p>
+        </div>
+        <div class="registration-steps-cards">
+          <div class="registration-step-card">
+            <div class="registration-step-circle">1</div>
             <div class="registration-step-icon">🧑‍💼</div>
-            <div>
-              <div class="registration-step-title">1. Первая консультация</div>
-              <div class="registration-step-desc">Мы обсудим ваши цели и подберём подходящий формат регистрации. Объясним все доступные опции открытия бизнеса в Катаре.</div>
+            <div class="registration-step-content">
+              <div class="registration-step-title">Первая консультация</div>
+              <div class="registration-step-desc">Обсудим ваши цели, подберём формат регистрации и объясним все опции открытия бизнеса в Катаре.</div>
             </div>
           </div>
-          <div class="registration-step">
+          <div class="registration-step-card">
+            <div class="registration-step-circle">2</div>
             <div class="registration-step-icon">📄</div>
-            <div>
-              <div class="registration-step-title">2. Выбор юридической формы</div>
-              <div class="registration-step-desc">Поможем определить оптимальный тип компании (LLC, филиал, представительство и т.д.), исходя из ваших задач, сферы и структуры собственности.</div>
+            <div class="registration-step-content">
+              <div class="registration-step-title">Выбор юридической формы</div>
+              <div class="registration-step-desc">Определим оптимальный тип компании (LLC, филиал, представительство и др.) под ваши задачи и структуру.</div>
             </div>
           </div>
-          <div class="registration-step">
+          <div class="registration-step-card">
+            <div class="registration-step-circle">3</div>
             <div class="registration-step-icon">📑</div>
-            <div>
-              <div class="registration-step-title">3. Получение лицензии</div>
-              <div class="registration-step-desc">Соберём и оформим все необходимые документы, подадим заявку и запустим процесс регистрации от вашего имени.</div>
+            <div class="registration-step-content">
+              <div class="registration-step-title">Получение лицензии</div>
+              <div class="registration-step-desc">Соберём и оформим документы, подадим заявку и запустим процесс регистрации от вашего имени.</div>
             </div>
           </div>
-          <div class="registration-step">
+          <div class="registration-step-card">
+            <div class="registration-step-circle">4</div>
             <div class="registration-step-icon">🛂</div>
-            <div>
-              <div class="registration-step-title">4. Оформление визы</div>
-              <div class="registration-step-desc">После регистрации бизнеса оформим резидентскую визу, обеспечим её одобрение и получение официальных документов.</div>
+            <div class="registration-step-content">
+              <div class="registration-step-title">Оформление визы</div>
+              <div class="registration-step-desc">Оформим резидентскую визу, обеспечим одобрение и получение официальных документов.</div>
             </div>
           </div>
-          <div class="registration-step">
+          <div class="registration-step-card">
+            <div class="registration-step-circle">5</div>
             <div class="registration-step-icon">🏦</div>
-            <div>
-              <div class="registration-step-title">5. Открытие корпоративного счёта</div>
-              <div class="registration-step-desc">Подберём оптимальный банк и поможем открыть счёт — будь то локальный (onshore) или международный (offshore), в зависимости от структуры вашего бизнеса.</div>
+            <div class="registration-step-content">
+              <div class="registration-step-title">Открытие корпоративного счёта</div>
+              <div class="registration-step-desc">Подберём банк и поможем открыть счёт — локальный или международный, под вашу структуру.</div>
             </div>
           </div>
         </div>
@@ -132,7 +143,7 @@
     <section class="strategy-section">
       <div class="strategy-container">
         <div class="strategy-text">
-          <h2>Ваш стратегический партнёр в <b>бизнесе</b></h2>
+          <h2 style="white-space:normal;word-break:break-word;">Ваш стратегический партнёр в <b>бизнесе</b></h2>
           <h3>Из Катара — на глобальный рынок</h3>
           <p>Мы — ваш надёжный партнёр в создании и масштабировании бизнеса, будь вы стартапом, МСБ или крупной компанией.</p>
           <p>
@@ -140,7 +151,7 @@
           </p>
         </div>
         <div class="strategy-image">
-          <img src="/src/images/earth.svg" alt="Глобус" />
+          <img src="src/images/earth.svg" alt="Глобус" />
         </div>
       </div>
     </section>
@@ -171,10 +182,10 @@
       <div class="registration-places-container">
         <h2>Где можно зарегистрировать бизнес в Катаре?</h2>
         <div class="registration-logos">
-          <img src="/src/images/Container.png" alt="Ministry of Commerce and Industry" class="registration-logo" />
-          <img src="/src/images/10.jpg.png" alt="Qatar Financial Centre" class="registration-logo" />
-          <img src="/src/images/11.jpg.png" alt="Qatar Free Zones" class="registration-logo" />
-          <img src="/src/images/12.jpg.png" alt="Qatar Financial Centre" class="registration-logo" />
+          <img src="src/images/Container.png" alt="Ministry of Commerce and Industry" class="registration-logo" />
+          <img src="src/images/10.jpg.png" alt="Qatar Financial Centre" class="registration-logo" />
+          <img src="src/images/11.jpg.png" alt="Qatar Free Zones" class="registration-logo" />
+          <img src="src/images/12.jpg.png" alt="Qatar Financial Centre" class="registration-logo" />
         </div>
       </div>
     </section>
@@ -182,10 +193,10 @@
       <div class="clients-container">
         <h2>Наши клиенты</h2>
         <div class="clients-logos">
-          <img src="/src/images/qalan.png" alt="Qalan" class="client-logo" />
-          <img src="/src/images/MUSA.png" alt="MUSA" class="client-logo" />
-          <img src="/src/images/qalan.png" alt="Qalan" class="client-logo" />
-          <img src="/src/images/MUSA.png" alt="MUSA" class="client-logo" />
+          <img src="src/images/qalan.png" alt="Qalan" class="client-logo" />
+          <img src="src/images/MUSA.png" alt="MUSA" class="client-logo" />
+          <img src="src/images/qalan.png" alt="Qalan" class="client-logo" />
+          <img src="src/images/MUSA.png" alt="MUSA" class="client-logo" />
         </div>
       </div>
     </section>
@@ -202,14 +213,16 @@
         <div class="footer-info">
           <p class="address">Al Muntazah Trading Centre, 5th Floor, Building no. 1 Doha</p>
           <p class="phone">+97450910893</p>
-          <p class="email">Info@go2market.qa</p>
+          <p class="email">
+            <a href="mailto:Info@go2market.qa">Info@go2market.qa</a>
+          </p>
         </div>
 
         <div class="footer-social">
-          <a href="#" class="social-link"><img src="/src/images/facebook.png" alt="Facebook" /></a>
-          <a href="#" class="social-link"><img src="/src/images/instagram.png" alt="Instagram" /></a>
-          <a href="#" class="social-link"><img src="/src/images/telegram.png" alt="Telegram" /></a>
-          <a href="#" class="social-link"><img src="/src/images/whatsapp.png" alt="WhatsApp" /></a>
+          <a href="#" class="social-link"><img src="src/images/facebook.png" alt="Facebook" /></a>
+          <a href="#" class="social-link"><img src="src/images/instagram.png" alt="Instagram" /></a>
+          <a href="#" class="social-link"><img src="src/images/telegram.png" alt="Telegram" /></a>
+          <a href="#" class="social-link"><img src="src/images/whatsapp.png" alt="WhatsApp" /></a>
         </div>
 
         <div class="footer-copyright">
@@ -217,5 +230,6 @@
         </div>
       </div>
     </footer>
+    <script src="src/js/animations.js"></script>
   </body>
 </html>
