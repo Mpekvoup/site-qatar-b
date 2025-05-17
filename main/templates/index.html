@@ -1,0 +1,548 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% if LANGUAGE_CODE == "en" %}
+        G2M Intl Consulting
+      {% else %}
+        G2M Intl Consulting
+      {% endif %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <header class="header fade-in">
+      <div class="logo">
+        {% if LANGUAGE_CODE == "en" %}
+          G2M<br /><span>INTL CONSULTING</span>
+        {% else %}
+          G2M<br /><span>INTL CONSULTING</span>
+        {% endif %}
+      </div>
+      <nav class="nav">
+        <a href="#about-text">
+          {% if LANGUAGE_CODE == "en" %}About us{% else %}О нас{% endif %}
+        </a>
+        <a href="#reg-sec">
+          {% if LANGUAGE_CODE == "en" %}What we do{% else %}Что мы делаем{% endif %}
+        </a>
+        <a href="#reg-sec">
+          {% if LANGUAGE_CODE == "en" %}About the company{% else %}О компании{% endif %}
+        </a>
+        <a href="#contt">
+          {% if LANGUAGE_CODE == "en" %}Contacts{% else %}Контакты{% endif %}
+        </a>
+        <a href="{% url 'switch_language' %}?lang=en&next={{ request.path }}"
+           class="lang"{% if LANGUAGE_CODE == "en" %} aria-current{% endif %}>
+          En
+        </a>
+        <a href="{% url 'switch_language' %}?lang=ru&next={{ request.path }}"
+           class="lang"{% if LANGUAGE_CODE == "ru" %} aria-current{% endif %}>
+          Ru
+        </a>
+      </nav>
+    </header>
+
+    <main class="main fade-in">
+      <div class="main-bg"></div>
+      <div class="main-content">
+        <h1>
+          {% if LANGUAGE_CODE == "en" %}
+            Want to grow your business in Qatar?
+          {% else %}
+            Хотите развивать<br />бизнес в Катаре?
+          {% endif %}
+        </h1>
+        <p>
+          {% if LANGUAGE_CODE == "en" %}
+            We’ll support you at every step—from company registration to market entry and investor relations.
+          {% else %}
+            Сопроводим на всех этапах — от регистрации компании до выхода на рынок и работы с инвесторами.
+          {% endif %}
+        </p>
+        <a href="#consult-section" class="btn">
+          {% if LANGUAGE_CODE == "en" %}Get a consultation{% else %}Получить консультацию{% endif %}
+        </a>
+        <div class="services fade-in">
+          <div class="service">
+            <h3>
+              {% if LANGUAGE_CODE == "en" %}Company registration{% else %}Регистрация компаний{% endif %}
+            </h3>
+            <p>
+              {% if LANGUAGE_CODE == "en" %}
+                We guide you through setting up your business in Qatar: document preparation, licensing, compliance and governance.
+              {% else %}
+                Сопровождаем при открытии бизнеса в Катаре: оформление документов, получение лицензий, составление местных и международных стандартов, корпоративное управление.
+              {% endif %}
+            </p>
+          </div>
+          <div class="service">
+            <h3>
+              {% if LANGUAGE_CODE == "en" %}Business consulting{% else %}Бизнес-консалтинг{% endif %}
+            </h3>
+            <p>
+              {% if LANGUAGE_CODE == "en" %}
+                Go-to-market strategies, market analysis, competitor research, location scouting and positioning.
+              {% else %}
+                Разработка Go-to-Market стратегий, анализ рынка, исследование конкурентов, подбор локации и позиционирование.
+              {% endif %}
+            </p>
+          </div>
+          <div class="service">
+            <h3>
+              {% if LANGUAGE_CODE == "en" %}Fundraising support{% else %}Привлечение инвестиций{% endif %}
+            </h3>
+            <p>
+              {% if LANGUAGE_CODE == "en" %}
+                Pitchdeck prep, financial modeling, investor sourcing and introductions to Qatari VCs and angels.
+              {% else %}
+                Подготовка к инвестициям: создание презентаций, финансовое моделирование, поиск инвесторов, установление контактов с фондами и бизнес-ангелами в Катаре.
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="about-section fade-in">
+      <div class="about-container">
+        <div id="about-text" class="about-text">
+          <h2>
+            {% if LANGUAGE_CODE == "en" %}Who we are{% else %}Кто мы{% endif %}
+          </h2>
+          <p>
+            {% if LANGUAGE_CODE == "en" %}
+              G2M International Consulting connects Central Asia and Qatar.<br />
+              We help entrepreneurs launch in Qatar: from entity selection and registration to market entry and investor outreach.<br />
+              Our expertise lies in local context, business networks, and practical support at every growth stage.
+            {% else %}
+              G2M International Consulting — консалтинговая компания, соединяющая Центральную Азию и Катар.<br />
+              Мы помогаем предпринимателям запускать бизнес в Катаре: от выбора структуры и регистрации до выхода на рынок и привлечения инвестиций.<br />
+              Наша экспертиза — в локальном контексте, деловых связях и практической поддержке на всех этапах роста.
+            {% endif %}
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="{% static 'images/qatarsite.png' %}"
+               alt="{% if LANGUAGE_CODE == 'en' %}Meeting in Qatar{% else %}Встреча в Катаре{% endif %}" />
+        </div>
+      </div>
+    </section>
+
+    <section class="principles-section fade-in">
+      <div class="principles-bg"></div>
+      <div class="principles-container enhanced">
+        <div class="principles-header">
+          <h2 class="principles-title">
+            {% if LANGUAGE_CODE == "en" %}Our principles{% else %}Наши принципы{% endif %}
+          </h2>
+          <p class="principles-subtitle">
+            {% if LANGUAGE_CODE == "en" %}We build on three core values:{% else %}Мы строим работу на трёх ключевых ценностях:{% endif %}
+          </p>
+        </div>
+        <div class="principles-list-cards">
+          <div class="principle-card">
+            <div class="principle-icon-circle principle-icon-1">&#10003;</div>
+            <div class="principle-card-content">
+              <div class="principle-title">
+                {% if LANGUAGE_CODE == "en" %}Integrity{% else %}Честность{% endif %}
+              </div>
+              <div class="principle-desc">
+                {% if LANGUAGE_CODE == "en" %}
+                  Transparent work, no hidden terms—foundation for long-term partnerships.
+                {% else %}
+                  Работаем открыто, без скрытых условий. Прозрачность — основа долгосрочного партнёрства.
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon-circle principle-icon-2">
+              <img src="{% static 'images/indi.png' %}"
+                   alt="{% if LANGUAGE_CODE == 'en' %}Personalized approach{% else %}Индивидуальный подход{% endif %}"
+                   class="principle-icon-img" />
+            </div>
+            <div class="principle-card-content">
+              <div class="principle-title">
+                {% if LANGUAGE_CODE == "en" %}Personalized approach{% else %}Индивидуальный подход{% endif %}
+              </div>
+              <div class="principle-desc">
+                {% if LANGUAGE_CODE == "en" %}
+                  Tailored solutions—we deeply understand each client’s needs and goals.
+                {% else %}
+                  Каждому бизнесу — своё решение. Мы глубоко вникаем в задачи клиента и настраиваем стратегию под конкретные цели.
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon-circle principle-icon-3">
+              <img src="{% static 'images/reslt.png' %}"
+                   alt="{% if LANGUAGE_CODE == 'en' %}Results-driven{% else %}Ориентация на результат{% endif %}"
+                   class="principle-icon-img" />
+            </div>
+            <div class="principle-card-content">
+              <div class="principle-title">
+                {% if LANGUAGE_CODE == "en" %}Results-driven{% else %}Ориентация на результат{% endif %}
+              </div>
+              <div class="principle-desc">
+                {% if LANGUAGE_CODE == "en" %}
+                  We measure success in clear metrics: company formation, visa approvals, funds raised.
+                {% else %}
+                  Главное — практическая польза. Мы измеряем успех в понятных метриках: открытие компании, получение визы, привлечённые инвестиции.
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reg-sec" class="registration-section fade-in">
+      <div class="registration-bg"></div>
+      <div class="registration-container enhanced">
+        <div class="registration-header">
+          <h2 class="registration-title">
+            {% if LANGUAGE_CODE == "en" %}Company registration in Qatar{% else %}Регистрация компании в Катаре{% endif %}
+          </h2>
+          <p class="registration-subtitle">
+            {% if LANGUAGE_CODE == "en" %}Step-by-step support from G2M experts{% else %}Пошаговый процесс сопровождения от экспертов G2M{% endif %}
+          </p>
+        </div>
+        <div class="registration-steps-cards">
+          {% for i in "12345" %}
+          <div class="registration-step-card">
+            <div class="registration-step-circle">{{ forloop.counter }}</div>
+            {% if forloop.counter == 1 %}
+              <div class="registration-step-icon">
+                <img src="{% static 'images/consult.png' %}"
+                     alt="{% if LANGUAGE_CODE == 'en' %}Consultation{% else %}Консультация{% endif %}"
+                     class="icon-img" />
+              </div>
+              <div class="registration-step-content">
+                <div class="registration-step-title">
+                  {% if LANGUAGE_CODE == 'en' %}Initial consultation{% else %}Первая консультация{% endif %}
+                </div>
+                <div class="registration-step-desc">
+                  {% if LANGUAGE_CODE == 'en' %}
+                    We’ll discuss your goals, choose the right structure, and explain all registration options.
+                  {% else %}
+                    Обсудим ваши цели, подберём формат регистрации и объясним все опции открытия бизнеса в Катаре.
+                  {% endif %}
+                </div>
+              </div>
+            {% elif forloop.counter == 2 %}
+              <div class="registration-step-icon">
+                <img src="{% static 'images/form.svg' %}"
+                     alt="{% if LANGUAGE_CODE == 'en' %}Legal form selection{% else %}Выбор юридической формы{% endif %}"
+                     class="icon-img" />
+              </div>
+              <div class="registration-step-content">
+                <div class="registration-step-title">
+                  {% if LANGUAGE_CODE == 'en' %}Legal form selection{% else %}Выбор юридической формы{% endif %}
+                </div>
+                <div class="registration-step-desc">
+                  {% if LANGUAGE_CODE == 'en' %}
+                    We determine the optimal entity type (LLC, branch, rep office, etc.) for your needs.
+                  {% else %}
+                    Определим оптимальный тип компании (LLC, филиал, представительство и др.) под ваши задачи и структуру.
+                  {% endif %}
+                </div>
+              </div>
+            {% elif forloop.counter == 3 %}
+              <div class="registration-step-icon">
+                <img src="{% static 'images/license.svg' %}"
+                     alt="{% if LANGUAGE_CODE == 'en' %}License procurement{% else %}Получение лицензии{% endif %}"
+                     class="icon-img" />
+              </div>
+              <div class="registration-step-content">
+                <div class="registration-step-title">
+                  {% if LANGUAGE_CODE == 'en' %}License procurement{% else %}Получение лицензии{% endif %}
+                </div>
+                <div class="registration-step-desc">
+                  {% if LANGUAGE_CODE == 'en' %}
+                    We prepare and submit your license application on your behalf.
+                  {% else %}
+                    Соберём и оформим документы, подадим заявку и запустим процесс регистрации от вашего имени.
+                  {% endif %}
+                </div>
+              </div>
+            {% elif forloop.counter == 4 %}
+              <div class="registration-step-icon">
+                <img src="{% static 'images/visa.svg' %}"
+                     alt="{% if LANGUAGE_CODE == 'en' %}Visa processing{% else %}Оформление визы{% endif %}"
+                     class="icon-img" />
+              </div>
+              <div class="registration-step-content">
+                <div class="registration-step-title">
+                  {% if LANGUAGE_CODE == 'en' %}Visa processing{% else %}Оформление визы{% endif %}
+                </div>
+                <div class="registration-step-desc">
+                  {% if LANGUAGE_CODE == 'en' %}
+                    We handle your resident visa application from start to finish.
+                  {% else %}
+                    Оформим резидентскую визу, обеспечим одобрение и получение официальных документов.
+                  {% endif %}
+                </div>
+              </div>
+            {% else %}
+              <div class="registration-step-icon">
+                <img src="{% static 'images/account.svg' %}"
+                     alt="{% if LANGUAGE_CODE == 'en' %}Corporate bank account{% else %}Открытие корпоративного счёта{% endif %}"
+                     class="icon-img" />
+              </div>
+              <div class="registration-step-content">
+                <div class="registration-step-title">
+                  {% if LANGUAGE_CODE == 'en' %}Corporate bank account{% else %}Открытие корпоративного счёта{% endif %}
+                </div>
+                <div class="registration-step-desc">
+                  {% if LANGUAGE_CODE == 'en' %}
+                    We recommend a bank and assist in opening your account—local or international structure.
+                  {% else %}
+                    Подберём банк и поможем открыть счёт — локальный или международный, под вашу структуру.
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="strategy-section">
+      <div class="strategy-container">
+        <div class="strategy-text">
+          <h2 style="white-space:normal;word-break:break-word;">
+            {% if LANGUAGE_CODE == 'en' %}
+              Your strategic partner in <b>business</b>
+            {% else %}
+              Ваш стратегический партнёр в <b>бизнесе</b>
+            {% endif %}
+          </h2>
+          <h3>
+            {% if LANGUAGE_CODE == 'en' %}
+              From Qatar to the global market
+            {% else %}
+              Из Катара — на глобальный рынок
+            {% endif %}
+          </h3>
+          <p>
+            {% if LANGUAGE_CODE == 'en' %}
+              We are your trusted partner in creating and scaling businesses—whether you’re a startup, SME, or enterprise.
+            {% else %}
+              Мы — ваш надёжный партнёр в создании и масштабировании бизнеса, будь вы стартапом, МСБ или крупной компанией.
+            {% endif %}
+          </p>
+          <p>
+            {% if LANGUAGE_CODE == 'en' %}
+              Our expertise spans entity formation in Qatar, global expansion, and business hub development.<br />
+              We accompany you at every stage of growth.
+            {% else %}
+              Наша экспертиза охватывает регистрацию компаний в Катаре, глобальную экспансию и запуск бизнес-хабов.<br />
+              Мы сопровождаем вас на каждом этапе роста.
+            {% endif %}
+          </p>
+        </div>
+        <div class="strategy-image">
+          <img src="{% static 'images/earth.svg' %}"
+               alt="{% if LANGUAGE_CODE == 'en' %}Globe{% else %}Глобус{% endif %}" />
+        </div>
+      </div>
+    </section>
+
+    <section  id="consult-section" class="consult-section">
+      <div class="consult-container">
+        <div class="consult-info">
+          <h2>
+            {% if LANGUAGE_CODE == 'en' %}
+              Request a free consultation
+            {% else %}
+              Оставьте заявку на бесплатную консультацию
+            {% endif %}
+          </h2>
+          <p>
+            {% if LANGUAGE_CODE == 'en' %}
+              We’ll help you understand where to start—no obligations or pressure.
+            {% else %}
+              Мы поможем вам понять, с чего начать — без обязательств и давления.
+            {% endif %}
+          </p>
+        </div>
+        <form class="consult-form" method="post">
+          {% csrf_token %}
+          <input type="text"
+                 name="name"
+                 placeholder="{% if LANGUAGE_CODE == 'en' %}Name{% else %}Имя{% endif %}"
+                 value="{{ form.name.value|default_if_none:'' }}"
+                 required />
+          {% if form.name.errors %}<div style="color:red;">{{ form.name.errors.0 }}</div>{% endif %}
+
+          <input type="tel"
+                 name="phone"
+                 placeholder="{% if LANGUAGE_CODE == 'en' %}+1 (___) ___-____{% else %}+7(   )   -   -{% endif %}"
+                 value="{{ form.phone.value|default_if_none:'' }}"
+                 required />
+          {% if form.phone.errors %}<div style="color:red;">{{ form.phone.errors.0 }}</div>{% endif %}
+
+          <select name="country" required>
+            <option value="" disabled {% if not form.country.value %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Choose your country for business{% else %}Выберите страну для бизнеса{% endif %}
+            </option>
+            <option value="qatar" {% if form.country.value == "qatar" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Qatar{% else %}Катар{% endif %}
+            </option>
+            <option value="uae" {% if form.country.value == "uae" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}UAE{% else %}ОАЭ{% endif %}
+            </option>
+            <option value="kazakhstan" {% if form.country.value == "kazakhstan" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Kazakhstan{% else %}Казахстан{% endif %}
+            </option>
+            <option value="other" {% if form.country.value == "other" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Other{% else %}Другая страна{% endif %}
+            </option>
+          </select>
+          {% if form.country.errors %}<div style="color:red;">{{ form.country.errors.0 }}</div>{% endif %}
+
+          <textarea name="comment"
+                    placeholder="{% if LANGUAGE_CODE == 'en' %}Comment{% else %}Комментарий{% endif %}">{{ form.comment.value|default_if_none:'' }}</textarea>
+          {% if form.comment.errors %}<div style="color:red;">{{ form.comment.errors.0 }}</div>{% endif %}
+
+          <button type="submit">
+            {% if LANGUAGE_CODE == 'en' %}Get a consultation{% else %}Получить консультацию{% endif %}
+          </button>
+        </form>
+        {% if success %}
+          <p style="color:green;">
+            {% if LANGUAGE_CODE == 'en' %}Thank you! Your request has been submitted.{% else %}Спасибо! Ваша заявка отправлена.{% endif %}
+          </p>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="registration-places enhanced fade-in">
+      <div class="registration-places-bg"></div>
+      <div class="registration-places-container">
+        <h2 class="registration-places-title">
+          {% if LANGUAGE_CODE == 'en' %}Where to register your business in Qatar?{% else %}Где можно зарегистрировать бизнес в Катаре?{% endif %}
+        </h2>
+        <div class="registration-logos-cards">
+          <div class="registration-logo-card">
+            <img src="{% static 'images/Container.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Ministry of Commerce and Industry{% else %}Ministry of Commerce and Industry{% endif %}"
+                 class="registration-logo-img" />
+            <div class="registration-logo-label">
+              {% if LANGUAGE_CODE == 'en' %}Ministry of Commerce and Industry{% else %}Ministry of Commerce and Industry{% endif %}
+            </div>
+          </div>
+          <div class="registration-logo-card">
+            <img src="{% static 'images/10.jpg.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Financial Centre{% else %}Qatar Financial Centre{% endif %}"
+                 class="registration-logo-img" />
+            <div class="registration-logo-label">
+              {% if LANGUAGE_CODE == 'en' %}Qatar Financial Centre{% else %}Qatar Financial Centre{% endif %}
+            </div>
+          </div>
+          <div class="registration-logo-card">
+            <img src="{% static 'images/11.jpg.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Free Zones{% else %}Qatar Free Zones{% endif %}"
+                 class="registration-logo-img" />
+            <div class="registration-logo-label">
+              {% if LANGUAGE_CODE == 'en' %}Qatar Free Zones{% else %}Qatar Free Zones{% endif %}
+            </div>
+          </div>
+          <div class="registration-logo-card">
+            <img src="{% static 'images/12.jpg.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Science & Tech Park{% else %}Qatar Science & Tech Park{% endif %}"
+                 class="registration-logo-img" />
+            <div class="registration-logo-label">
+              {% if LANGUAGE_CODE == 'en' %}Qatar Science & Tech Park{% else %}Qatar Science & Tech Park{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients-section enhanced fade-in">
+      <div class="clients-bg"></div>
+      <div class="clients-container">
+        <h2 class="clients-title">
+          {% if LANGUAGE_CODE == 'en' %}Our clients{% else %}Наши клиенты{% endif %}
+        </h2>
+        <div class="clients-logos-cards">
+          <div class="client-logo-card">
+            <img src="{% static 'images/qalan.png' %}"
+                 alt="Qalan"
+                 class="client-logo-img" />
+            <div class="client-logo-label">Qalan</div>
+          </div>
+          <div class="client-logo-card">
+            <img src="{% static 'images/MUSA.png' %}"
+                 alt="MUSA"
+                 class="client-logo-img" />
+            <div class="client-logo-label">MUSA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <a href="#">
+            {% if LANGUAGE_CODE == 'en' %}About us{% else %}О нас{% endif %}
+          </a>
+          <a href="#">
+            {% if LANGUAGE_CODE == 'en' %}Services{% else %}Услуги{% endif %}
+          </a>
+          <a href="#">
+            {% if LANGUAGE_CODE == 'en' %}Consultation{% else %}Консультация{% endif %}
+          </a>
+          <a href="#">
+            {% if LANGUAGE_CODE == 'en' %}Contacts{% else %}Контакты{% endif %}
+          </a>
+        </nav>
+        <div id="contt" class="footer-info">
+          <p class="address">Al Muntazah Trading Centre, 5th Floor, Building no. 1 Doha</p>
+          <p class="phone">+97450910893</p>
+          <p class="email">
+            <a href="mailto:Info@go2market.qa">Info@go2market.qa</a>
+          </p>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/" class="social-link" target="_blank">
+            <img src="{% static 'images/facebook.png' %} "
+                 alt="{% if LANGUAGE_CODE == 'en' %}Facebook{% else %}Facebook{% endif %}" />
+          </a>
+          <a href="https://www.instagram.com/g2m.qa"  class="social-link" target="_blank">
+            <img src="{% static 'images/instagram.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Instagram{% else %}Instagram{% endif %}" />
+          </a>
+          <a href="https://t.me/mullaum" class="social-link" target="_blank">
+            <img src="{% static 'images/telegram.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Telegram{% else %}Telegram{% endif %}" />
+          </a>
+          <a href="https://wa.me/97450910893" class="social-link" target="_blank">
+            <img src="{% static 'images/whatsapp.png' %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}WhatsApp{% else %}WhatsApp{% endif %}" />
+          </a>
+        </div>
+        <div class="footer-copyright">
+          <p>
+            {% if LANGUAGE_CODE == 'en' %}
+              Copyright © 2025 go2market.qa All rights reserved.
+            {% else %}
+              Copyright © 2025 go2market.qa Все права защищены.
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/animations.js' %}"></script>
+  </body>
+</html>
+
