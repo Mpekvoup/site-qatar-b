@@ -11,17 +11,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "default-secret")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "web-production-fa1d.up.railway.app",
-    ".railway.app"
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://web-production-fa1d.up.railway.app",
-    "https://*.railway.app"
-]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "https://localhost").split(",")
 
 CSRF_COOKIE_SECURE = True
 
