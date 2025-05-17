@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'landing_qatar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQL_DATABASE', 'qatar-g2m-database'),
+        'NAME': os.environ.get('MYSQL_DATABASE', 'railway'),
         'USER': os.environ.get('MYSQL_USER', 'root'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD', ''),
         'HOST': os.environ.get('MYSQL_HOST', 'localhost'),
