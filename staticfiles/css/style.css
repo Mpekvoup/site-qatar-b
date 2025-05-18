@@ -896,7 +896,7 @@ body::before {
 }
 
 .footer-info a:hover {
-  text-decoration: underline; /* или любой другой эффект при ховере */
+  text-decoration: underline; 
 }
 
 
