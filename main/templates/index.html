@@ -63,7 +63,8 @@
             Сопроводим на всех этапах — от регистрации компании до выхода на рынок и работы с инвесторами.
           {% endif %}
         </p>
-        <a href="#consult-section" class="btn">
+        <a href="https://wa.me/97450910893?text={% if LANGUAGE_CODE == 'en' %}Hello!{% else %}Здравствуйте!{% endif %}" 
+   class="btn" target="_blank" rel="noopener">
           {% if LANGUAGE_CODE == "en" %}Get a consultation{% else %}Получить консультацию{% endif %}
         </a>
         <div class="services fade-in">
@@ -390,7 +391,11 @@
 
           <select name="country" required>
             <option value="" disabled {% if not form.country.value %}selected{% endif %}>
-              {% if LANGUAGE_CODE == 'en' %}Choose your country for business{% else %}Выберите страну для бизнеса{% endif %}
+              {% if LANGUAGE_CODE == 'en' %}
+                Choose your country for business
+              {% else %}
+                Выберите страну для бизнеса
+              {% endif %}
             </option>
             <option value="qatar" {% if form.country.value == "qatar" %}selected{% endif %}>
               {% if LANGUAGE_CODE == 'en' %}Qatar{% else %}Катар{% endif %}
@@ -401,11 +406,21 @@
             <option value="kazakhstan" {% if form.country.value == "kazakhstan" %}selected{% endif %}>
               {% if LANGUAGE_CODE == 'en' %}Kazakhstan{% else %}Казахстан{% endif %}
             </option>
+            <option value="bahrain" {% if form.country.value == "bahrain" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Bahrain{% else %}Бахрейн{% endif %}
+            </option>
+            <option value="oman" {% if form.country.value == "oman" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Oman{% else %}Оман{% endif %}
+            </option>
+            <option value="kuwait" {% if form.country.value == "kuwait" %}selected{% endif %}>
+              {% if LANGUAGE_CODE == 'en' %}Kuwait{% else %}Кувейт{% endif %}
+            </option>
             <option value="other" {% if form.country.value == "other" %}selected{% endif %}>
               {% if LANGUAGE_CODE == 'en' %}Other{% else %}Другая страна{% endif %}
             </option>
           </select>
           {% if form.country.errors %}<div style="color:red;">{{ form.country.errors.0 }}</div>{% endif %}
+
 
           <textarea name="comment"
                     placeholder="{% if LANGUAGE_CODE == 'en' %}Comment{% else %}Комментарий{% endif %}">{{ form.comment.value|default_if_none:'' }}</textarea>
@@ -440,10 +455,10 @@
           </div>
           <div class="registration-logo-card">
             <img src="{% static 'images/10.jpg.png' %}"
-                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Financial Centre{% else %}Qatar Financial Centre{% endif %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Science & Tech Park{% else %}Qatar Science & Tech Park{% endif %}"
                  class="registration-logo-img" />
             <div class="registration-logo-label">
-              {% if LANGUAGE_CODE == 'en' %}Qatar Financial Centre{% else %}Qatar Financial Centre{% endif %}
+              {% if LANGUAGE_CODE == 'en' %}Qatar Science & Tech Park{% else %}Qatar Science & Tech Park{% endif %}
             </div>
           </div>
           <div class="registration-logo-card">
@@ -456,10 +471,10 @@
           </div>
           <div class="registration-logo-card">
             <img src="{% static 'images/12.jpg.png' %}"
-                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Science & Tech Park{% else %}Qatar Science & Tech Park{% endif %}"
+                 alt="{% if LANGUAGE_CODE == 'en' %}Qatar Financial Centre{% else %}Qatar Financial Centre{% endif %}"
                  class="registration-logo-img" />
             <div class="registration-logo-label">
-              {% if LANGUAGE_CODE == 'en' %}Qatar Science & Tech Park{% else %}Qatar Science & Tech Park{% endif %}
+              {% if LANGUAGE_CODE == 'en' %}Qatar Financial Centre{% else %}Qatar Financial Centre{% endif %}
             </div>
           </div>
         </div>
@@ -506,15 +521,15 @@
           </a>
         </nav>
         <div id="contt" class="footer-info">
-          <p class="address">Al Muntazah Trading Centre, 5th Floor, Building no. 1 Doha</p>
+          <p class="address">Office No. 132Register05, 1st & 2nd Floors, Regus Business Centre, No. 67, D-Ring Road, Doha, Qatar</p>
           <p class="phone">+97450910893</p>
           <p class="email">
             <a href="mailto:Info@go2market.qa">Info@go2market.qa</a>
           </p>
         </div>
         <div class="footer-social">
-          <a href="https://www.facebook.com/" class="social-link" target="_blank">
-            <img src="{% static 'images/facebook.png' %} "
+          <a href="https://www.linkedin.com/in/begarys-otarov?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" target="_blank">
+            <img src="{% static 'images/in.svg' %} "
                  alt="{% if LANGUAGE_CODE == 'en' %}Facebook{% else %}Facebook{% endif %}" />
           </a>
           <a href="https://www.instagram.com/g2m.qa"  class="social-link" target="_blank">
@@ -544,5 +559,11 @@
 
     <script src="{% static 'js/animations.js' %}"></script>
   </body>
+  <a href="https://wa.me/97450910893?text={% if LANGUAGE_CODE == 'en' %}Hello!{% else %}Здравствуйте!{% endif %}" 
+   class="whatsapp-float" target="_blank" rel="noopener">
+   <img src="{% static 'images/whatsapp.png' %}"
+   alt="{% if LANGUAGE_CODE == 'en' %}WhatsApp{% else %}WhatsApp{% endif %}" />
+</a>
+
 </html>
 
