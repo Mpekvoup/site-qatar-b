@@ -883,6 +883,19 @@ body::before {
   gap: 48px;
   flex-wrap: wrap;
 }
+.phone {
+  text-decoration: none;
+}
+.email {
+  text-decoration: none;
+}
+
+.footer-info a,
+.footer-info a:visited {
+  color: inherit;        
+  text-decoration: none; 
+}
+
 
 .consult-info {
   flex: 1 1 340px;
