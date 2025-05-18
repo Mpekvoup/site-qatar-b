@@ -883,17 +883,20 @@ body::before {
   gap: 48px;
   flex-wrap: wrap;
 }
-.phone {
-  text-decoration: none;
+.phone, .email {
+  color: #0066cc; /* насыщенный синий */
+  text-decoration: underline #0066cc;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
-.email {
+.footer-info a{
+  color: #0066cc;          
   text-decoration: none;
+  cursor: pointer;       
 }
 
-.footer-info a,
-.footer-info a:visited {
-  color: inherit;        
-  text-decoration: none; 
+.footer-info a:hover {
+  text-decoration: underline; /* или любой другой эффект при ховере */
 }
 
 
