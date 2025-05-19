@@ -19,9 +19,15 @@ ALLOWED_HOSTS = [
     "www.go2market.qa",
     "web-production-fa1d.up.railway.app",
 ]
-CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "https://localhost").split(",")
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://go2market.qa",
+    "https://www.go2market.qa",
+    "https://web-production-fa1d.up.railway.app",
+]
 
 CSRF_COOKIE_SECURE = True
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
