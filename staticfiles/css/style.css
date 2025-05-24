@@ -880,13 +880,13 @@ body::before {
   margin-bottom: 24px;
 }
 .consult-info h2 {
-  font-size: 2.2rem;
+  font-size: 24px;
   font-weight: 800;
   margin-bottom: 10px;
   color: #ffffff;
 }
 .consult-info p {
-  font-size: 1.08rem;
+  font-size: 14px;
   color: #ffffff;
   margin-bottom: 12px;
 }
@@ -1096,7 +1096,7 @@ body::before {
     padding: 16px 24px;
   }
   .main-content {
-    padding: 0px 16px 300px 16px;
+    padding: 30px 16px 300px 16px;
   }
   
   .principles-list-cards,
@@ -1134,7 +1134,7 @@ body::before {
     text-align: center;
   }
   .main-content p {
-    font-size: 3.3rem;
+    font-size: 2.3rem;
     max-width: 100%;
     text-align: center;
   }
@@ -1176,7 +1176,7 @@ body::before {
 
 
   .principles-subtitle {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   /* Регистрация */
@@ -1207,13 +1207,13 @@ body::before {
     max-width: 100%;
   }
   .registration-section h2 {
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 800;
     margin-bottom: 12px;
     color: #222;
   }
   .registration-subtitle {
-    font-size: 13px;
+    font-size: 22px;
     margin-bottom: 32px;
     color: #444;
   }
@@ -1225,8 +1225,7 @@ body::before {
     font-weight: 800;
     font-size: 30px;
     border-radius: 50%;
-    display: flex
-;
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -1257,6 +1256,11 @@ body::before {
   }/* Стратегия */
   .strategy-text, .strategy-image {
     max-width: 100%;
+  }
+  .strategy-text p {
+    font-size: 2.08rem;
+    color: #444;
+    margin-bottom: 12px;
   }
   .principles-subtitle {
     font-size: 14px;
@@ -1294,11 +1298,11 @@ body::before {
   .whatsapp-float {
     bottom: 16px;
     right: 16px;
-    width: 80px;
-    height: 80px;
+    height: 150px;
+    width: 150px;
   }
   .whatsapp-float img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
 }

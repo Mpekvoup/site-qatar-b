@@ -1065,8 +1065,8 @@ body::before {
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1081,8 +1081,8 @@ body::before {
 }
 
 .whatsapp-float img {
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
 }
 /* --- MOBILE LAYOUT for screens up to 1000px --- */
 @media (max-width: 1000px) {
@@ -1095,7 +1095,7 @@ body::before {
     padding: 16px 24px;
   }
   .main-content {
-    padding: 0px 16px 300px 16px;
+    padding: 0px 16px 200px 16px;
   }
   
   .principles-list-cards,
@@ -1129,11 +1129,11 @@ body::before {
 
   /* Главный экран */
   .main-content h1 {
-    font-size: 6.8rem;
+    font-size: 5.8rem;
     text-align: center;
   }
   .main-content p {
-    font-size: 3.3rem;
+    font-size: 24px;
     max-width: 100%;
     text-align: center;
   }
@@ -1224,8 +1224,7 @@ body::before {
     font-weight: 800;
     font-size: 30px;
     border-radius: 50%;
-    display: flex
-;
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -1289,15 +1288,15 @@ body::before {
     height: 36px;
   }
 
-  /* Плавающая кнопка WhatsApp */
-  .whatsapp-float {
-    bottom: 16px;
-    right: 16px;
-    width: 50px;
-    height: 50px;
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
   }
+  
   .whatsapp-float img {
-    width: 28px;
-    height: 28px;
-  }
+    width: 100px;
+    height: 100px;
+  /* Плавающая кнопка WhatsApp */
+
+}
 }
