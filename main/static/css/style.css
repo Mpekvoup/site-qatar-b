@@ -4,9 +4,15 @@ body {
   color: #fff;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
 }
+
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -60,7 +66,7 @@ body::before {
   max-width: 1100px;
   margin: 0 auto;
   padding: 80px 32px 0 32px;
-  text-align: left;
+  text-align: center;
 }
 
 .logo {
@@ -144,7 +150,7 @@ body::before {
   max-width: 1100px;
   margin: 0 auto;
   padding: 80px 32px 0 32px;
-  text-align: left;
+  text-align: center;
 }
   
 .main-content h1 {
@@ -152,26 +158,32 @@ body::before {
   font-weight: 800;
   margin-bottom: 24px;
   line-height: 1.1;
+  text-align: center;
 }
   
 .main-content p {
   font-size: 1.3rem;
   margin-bottom: 32px;
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
   
 .btn {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   background: #a02c4a;
   color: #fff;
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 16px 32px;
+  font-size: 2rem;
+  padding: 14px 28px;
   border-radius: 6px;
   text-decoration: none;
-  margin-bottom: 48px;
+  margin: 0 auto;
   transition: background 0.2s;
 }
+
 .btn:hover {
   background: #c13a5c;
 }
@@ -208,7 +220,7 @@ body::before {
 .about-section {
   background: #fff;
   color: #222;
-  padding: 56px 0 40px 0;
+  padding: 0px 0 40px 0;
 }
 .about-container {
   display: flex;
@@ -217,7 +229,7 @@ body::before {
   max-width: 1100px;
   margin: 0 auto;
   gap: 40px;
-  padding: 0 32px;
+  padding: 100px;
 }
 .about-text {
   flex: 1 1 340px;
@@ -229,7 +241,7 @@ body::before {
   color: #222;
 }
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 14px;
   line-height: 1.6;
   color: #222;
 }
@@ -256,12 +268,15 @@ body::before {
   }
 }
 
-
+.principles-subtitle {
+  font-size: 14px;
+  
+}
 .principles-section {
   position: relative;
   background: #f7fafd;
   color: #222;
-  padding: 64px 0 64px 0;
+  padding: 0 25px 65px 25px;
   overflow: hidden;
 }
 .principles-bg {
@@ -296,15 +311,15 @@ body::before {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(160,44,74,0.08), 0 1.5px 8px rgba(160,44,74,0.04);
-  padding: 38px 28px 28px 28px;
-  flex: 1 1 260px;
-  min-width: 240px;
+  padding: 32px 75px;
+  flex: 1 1 300px;
+  min-width: 280px;
   max-width: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  border: 1.5px solid #e6f0fa;
+  border: 1.5px solid #f3dbe4;
   transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
 }
 .principle-card:hover {
@@ -348,12 +363,12 @@ body::before {
 }
 .principle-title {
   font-weight: 700;
-  font-size: 1.18rem;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #a02c4a;
 }
 .principle-desc {
-  font-size: 1.04rem;
+  font-size: 13px;
   color: #444;
   opacity: 0.97;
 }
@@ -525,7 +540,7 @@ body::before {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(160,44,74,0.08), 0 1.5px 8px rgba(160,44,74,0.04);
-  padding: 36px 28px 28px 28px;
+  padding: 36px 51px 28px 51px;
   flex: 1 1 260px;
   min-width: 240px;
   max-width: 320px;
@@ -547,9 +562,10 @@ body::before {
   background: linear-gradient(135deg, #a02c4a 60%, #e6f0fa 100%);
   color: #fff;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   border-radius: 50%;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(160,44,74,0.10);
@@ -617,89 +633,46 @@ body::before {
 }
 .registration-logos-cards {
   display: flex;
-  flex-wrap: wrap;
-  gap: 36px;
-  justify-content: center;
-}
-.registration-logo-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px rgba(44,122,160,0.08), 0 1.5px 8px rgba(44,122,160,0.04);
-  padding: 32px 28px 22px 28px;
-  flex: 1 1 200px;
-  min-width: 180px;
-  max-width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  border: 1.5px solid #e6f0fa;
-  transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
-}
-.registration-logo-card:hover {
-  box-shadow: 0 8px 36px rgba(44,122,160,0.16), 0 2px 12px rgba(44,122,160,0.08);
-  border-color: #2c7aa033;
-  transform: translateY(-4px) scale(1.025);
-}
-.registration-logo-img {
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 2px 8px #a02c4a11);
-  transition: filter 0.2s;
-}
-.registration-logo-card:hover .registration-logo-img {
-  filter: drop-shadow(0 4px 16px #2c7aa055);
-}
-.registration-logo-label {
-  text-align: center;
-  font-size: 1.04rem;
-  color: #2c7aa0;
-  font-weight: 600;
-  margin-top: 2px;
-  line-height: 1.3;
-}
-
-@media (max-width: 900px) {
-  .registration-logos-cards {
-    flex-direction: column;
-    gap: 22px;
-    align-items: center;
-  }
-  .registration-logo-card {
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
-  }
-}
-
-/* --- Clients Section Enhanced --- */
-.clients-section.enhanced {
-  position: relative;
-  background: #fff;
-  padding: 64px 0 64px 0;
   overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
 }
-.clients-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 80% 20%, #f7e6ee 0%, #fff 80%);
-  opacity: 0.45;
-  z-index: 0;
-  pointer-events: none;
+
+.logos-scroll {
+  display: flex;
+  gap: 36px;
+  animation: scrollInfinite 30s linear infinite;
+  width: fit-content;
 }
-.clients-title {
-  text-align: center;
-  font-size: 2.1rem;
-  font-weight: 900;
-  color: #a02c4a;
-  margin-bottom: 38px;
+
+.logos-scroll:hover {
+  animation-play-state: paused;
 }
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.registration-logo-card,
+.client-logo-card {
+  flex: 0 0 auto;
+}
+
 .clients-logos-cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 36px;
-  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.client-logo-card {
+  flex: 0 0 auto;
 }
 .client-logo-card {
   background: #fff;
@@ -927,6 +900,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-top: 30px;
   border: 1.5px solid #e0e0e0;
 }
 .consult-form input,
@@ -1109,4 +1083,221 @@ body::before {
 .whatsapp-float img {
   width: 32px;
   height: 32px;
+}
+/* --- MOBILE LAYOUT for screens up to 1000px --- */
+@media (max-width: 1000px) {
+  html, body {
+    overflow-y: auto;
+  }
+  
+  /* Общее уменьшение отступов */
+  .header {
+    padding: 16px 24px;
+  }
+  .main-content {
+    padding: 0px 16px 300px 16px;
+  }
+  
+  .principles-list-cards,
+  .registration-steps-cards,
+  .registration-logos-cards,
+  .clients-logos-cards,
+  .strategy-container {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  /* Шапка */
+  .about-container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .principles-list-cards {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2.8rem;
+  }
+  .nav a {
+    font-size: 2rem;
+    margin-left: 12px;
+  }
+
+  /* Главный экран */
+  .main-content h1 {
+    font-size: 6.8rem;
+    text-align: center;
+  }
+  .main-content p {
+    font-size: 3.3rem;
+    max-width: 100%;
+    text-align: center;
+  }
+  .btn {
+    font-size: 15px;
+    padding: 29px 28px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Услуги */
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service {
+    max-width: 90%;
+    text-align: center;
+  }
+  .service h3 {
+    font-size: 2.4rem;
+  }
+  .service p {
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  /* О нас */
+  .about-text h2 {
+    font-size: 3.4rem;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  .about-text p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 36px;
+  }
+
+
+  .principles-subtitle {
+    font-size: 14px;
+  }
+
+  /* Регистрация */
+  .principle-title {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #a02c4a;
+  }
+  .principle-desc {
+    font-size: 27px;
+    color: #444;
+    font-weight: bolder;
+    opacity: 0.97;
+  }
+  .principles-title {
+    font-size: 50px;
+    font-weight: 900;
+    color: #a02c4a;
+    margin-bottom: 12px;
+}
+  .principles-subtitle {
+    font-size: 19px;
+  }
+  /* Клиенты */
+  .registration-logo-card,
+  .client-logo-card {
+    max-width: 100%;
+  }
+  .registration-section h2 {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #222;
+  }
+  .registration-subtitle {
+    font-size: 13px;
+    margin-bottom: 32px;
+    color: #444;
+  }
+  .registration-step-circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #a02c4a 60%, #e6f0fa 100%);
+    color: #fff;
+    font-weight: 800;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex
+;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(160, 44, 74, 0.10);
+    margin-bottom: 12px;
+    border: 2.5px solid #fff;
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  .icon-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  .registration-step-title {
+    font-weight: 700;
+    font-size: 27px;
+    margin-bottom: 8px;
+    color: #a02c4a;
+  }
+  .registration-step-desc {
+    font-size: 24px;
+    color: #444;
+    opacity: 0.97;
+  }/* Стратегия */
+  .strategy-text, .strategy-image {
+    max-width: 100%;
+  }
+  .principles-subtitle {
+    font-size: 14px;
+    
+  }
+  /* Секция консультации */
+  .consult-container {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+  }
+  .consult-info, .consult-form {
+    max-width: 93%;
+  }
+  .consult-info {
+    margin-bottom: -200px;
+  }
+  /* Футер */
+  .footer-container {
+    padding: 0 16px;
+  }
+  .footer-nav {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .footer-info p, .footer-info a {
+    font-size: 1.9rem;
+  }
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Плавающая кнопка WhatsApp */
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
 }

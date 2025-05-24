@@ -6,7 +6,6 @@ from django.views.decorators.http import require_GET
 
 
 def index(request):
-    # 1) Получаем код языка из сессии вручную
     lang_code = request.session.get('django_language')
     if lang_code:
         translation.activate(lang_code)
