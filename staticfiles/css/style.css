@@ -557,6 +557,9 @@ body::before {
   border-color: #a02c4a33;
   transform: translateY(-4px) scale(1.025);
 }
+.clients-title {
+  text-align: center;
+}
 .registration-step-circle {
   width: 44px;
   height: 44px;
@@ -621,7 +624,7 @@ body::before {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 20% 80%, #e6f0fa 0%, #fff 80%);
-  opacity: 0.55;
+  opacity: 0.2;
   z-index: 0;
   pointer-events: none;
 }
@@ -901,7 +904,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin-top: 30px;
+  margin-top: 50px;
   border: 1.5px solid #e0e0e0;
 }
 .consult-form input,
@@ -1066,8 +1069,8 @@ body::before {
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1082,8 +1085,8 @@ body::before {
 }
 
 .whatsapp-float img {
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
 }
 /* --- MOBILE LAYOUT for screens up to 1000px --- */
 @media (max-width: 1000px) {
@@ -1258,13 +1261,29 @@ body::before {
     max-width: 100%;
   }
   .strategy-text p {
-    font-size: 2.08rem;
+    font-size: 14px;
     color: #444;
     margin-bottom: 12px;
   }
+  .strategy-text h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  .strategy-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #a02c4a;
+  }
+
   .principles-subtitle {
     font-size: 14px;
     
+  }
+  .clients-title {
+    text-align: center;
   }
   /* Секция консультации */
   .consult-container {
@@ -1287,7 +1306,7 @@ body::before {
     gap: 12px;
   }
   .footer-info p, .footer-info a {
-    font-size: 1.9rem;
+    font-size: 24px;
   }
   .social-link {
     width: 36px;
