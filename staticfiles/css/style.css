@@ -68,6 +68,9 @@ body::before {
   padding: 80px 32px 0 32px;
   text-align: center;
 }
+.clients-title {
+  text-align: center !important;
+}
 
 .logo {
   font-size: 2.2rem;
@@ -557,9 +560,6 @@ body::before {
   border-color: #a02c4a33;
   transform: translateY(-4px) scale(1.025);
 }
-.clients-title {
-  text-align: center;
-}
 .registration-step-circle {
   width: 44px;
   height: 44px;
@@ -624,7 +624,7 @@ body::before {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 20% 80%, #e6f0fa 0%, #fff 80%);
-  opacity: 0.2;
+  opacity: 0.55;
   z-index: 0;
   pointer-events: none;
 }
@@ -904,7 +904,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin-top: 50px;
+  margin-top: 30px;
   border: 1.5px solid #e0e0e0;
 }
 .consult-form input,
@@ -1069,8 +1069,8 @@ body::before {
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1085,8 +1085,8 @@ body::before {
 }
 
 .whatsapp-float img {
-  width: 100px;
-  height: 100px;
+  width: 32px;
+  height: 32px;
 }
 /* --- MOBILE LAYOUT for screens up to 1000px --- */
 @media (max-width: 1000px) {
@@ -1124,13 +1124,23 @@ body::before {
   }
 
   .logo {
-    font-size: 2.8rem;
+    font-size: 3.8rem;
   }
   .nav a {
     font-size: 2rem;
     margin-left: 12px;
   }
-
+  .nav .lang {
+    margin-left: 16px;
+    padding-left: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+    min-width: 32px;
+    text-align: center;
+    background: none;
+    position: relative;
+    z-index: 2;
+  }
   /* Главный экран */
   .main-content h1 {
     font-size: 6.8rem;
@@ -1261,29 +1271,13 @@ body::before {
     max-width: 100%;
   }
   .strategy-text p {
-    font-size: 14px;
+    font-size: 2.08rem;
     color: #444;
     margin-bottom: 12px;
   }
-  .strategy-text h2 {
-    font-size: 34px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: #222;
-  }
-  .strategy-text h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 18px;
-    color: #a02c4a;
-  }
-
   .principles-subtitle {
     font-size: 14px;
     
-  }
-  .clients-title {
-    text-align: center;
   }
   /* Секция консультации */
   .consult-container {
@@ -1306,7 +1300,7 @@ body::before {
     gap: 12px;
   }
   .footer-info p, .footer-info a {
-    font-size: 24px;
+    font-size: 22px;
   }
   .social-link {
     width: 36px;
@@ -1323,5 +1317,96 @@ body::before {
   .whatsapp-float img {
     width: 100px;
     height: 100px;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+  .clients-title {
+    text-align: center !important;
+  }
+
+  @media (max-width: 1000px) {
+    .burger-menu {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .burger-icon {
+      width: 55px;
+      height: 35px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 33px;
+    }
+
+    .burger-icon span {
+      display: block;
+      width: 100%;
+      height: 6px;
+      background: #fff;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .burger-menu.active .burger-icon span:nth-child(1) {
+      transform: rotate(45deg) translate(12px, 12px);
+    }
+
+    .burger-menu.active .burger-icon span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger-menu.active .burger-icon span:nth-child(3) {
+      transform: rotate(-45deg) translate(12px, -12px);
+    }
+    
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .menu-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100vh;
+      max-width: 400px;
+      background: #222;
+      padding: 100px 20px 20px;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+      transition: right 0.3s ease;
+    }
+
+    .nav.active {
+      right: 0;
+    }
+
+    .nav a {
+      margin: 15px 0;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+    }
   }
 }
